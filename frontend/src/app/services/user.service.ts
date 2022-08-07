@@ -19,8 +19,19 @@ export class UserService {
   }
   
   login(credentials:any){
-   return this.http.post(`${this.URI_USERS_BACKEND}/login`, credentials)
+    return this.http.post(`${this.URI_USERS_BACKEND}/login`, credentials)
+   }
+
+   loggedIn(){
+    return localStorage.getItem('token') ? true:false
   }
 
+  logout(){
+   localStorage.removeItem('token')
+   this.router.navigate(['/login'])
+   return
+  }
+
+  
 
 }
