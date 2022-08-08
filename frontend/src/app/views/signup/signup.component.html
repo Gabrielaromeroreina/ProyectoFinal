@@ -1,1 +1,512 @@
-<p>signup works!</p>
+
+<form #userForm="ngForm" id="formulario">
+    <div class="col-12">
+      <br />
+      <div class="container">
+        <h4 class="text-pink text-left mt-5">Información General</h4>
+        <hr />
+      </div>
+      <div class="container mt-4">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-5">
+            <div class="content-left">
+              <div class="mb-1">
+                <label for="entername" class="form-label text-dablue mt-3"
+                  >Nombre</label
+                >
+                <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp"
+
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="userService.currentUser.name"/>
+              </div>
+              <div>
+                <label
+                  for="exampleInputSpecies1"
+                  class="form-label text-dablue mt-3"
+                  >Especie</label
+                >
+                <input
+                type="text"
+                class="form-control"
+                id="exampleInputSpecies1"
+                aria-describedby="nameHelp"
+      
+                name="species"
+                #species="ngModel"
+                [(ngModel)]="userService.currentUser.species"
+                />
+                <datalist id="datalistOptions">
+                  <option value="Perro/a"></option>
+                  <option value="Gato/a"></option>
+                  <option value="Pez"></option>
+                  <option value="Ave"></option>
+                  <option value="Roedor"></option>
+                </datalist>
+              </div>
+              <div class="mb-1 col-md-6">
+                <label for="exampleInputBreed1" class="form-label text-dablue mt-3"
+                  >Raza</label
+                >
+                <input type="text"
+                class="form-control"
+                id="exampleInputBreed1"
+                aria-describedby="nameHelp"
+      
+                name="breed"
+                #breed="ngModel"
+                [(ngModel)]="userService.currentUser.breed"/>
+              </div>
+              <div class="mb-1 col-md-3">
+                <label for="enteredad" class="form-label text-dablue mt-3"
+                  >Edad</label
+                >
+                <input type="number"
+                class="form-control"
+                id="exampleInputAge1"
+                aria-describedby="nameHelp"
+      
+                name="age"
+                #age="ngModel"
+                [(ngModel)]="userService.currentUser.age" />
+              </div>
+              <div class="mb-1 col-md-3">
+                <label for="exampleInputWeight1" class="form-label text-dablue mt-3"
+                  >Peso</label
+                >
+                <input
+                type="number"
+                class="form-control"
+                id="exampleInputWeight1"
+                placeholder="Kg"
+                aria-describedby="nameHelp"
+      
+                name="weight"
+                #weight="ngModel"
+                [(ngModel)]="userService.currentUser.weight" 
+                 
+                />
+              </div>
+              <div>
+                <label class="mt-3 text-dablue" for="checkbox">Sexo</label>
+                <div class="form-check">
+                  <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputGender1"
+                  placeholder="Kg"
+                  aria-describedby="nameHelp"
+        
+                  name="gender"
+                  #gender="ngModel"
+                  [(ngModel)]="userService.currentUser.gender" 
+                  />
+                  <label
+                    class="form-check-label text-dablue"
+                    for="flexRadioDefault1 exampleInputGender1"
+                  >
+                    Macho
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                  />
+                  <label
+                    class="form-check-label text-dablue"
+                    for="flexRadioDefault2"
+                  >
+                    Hembra
+                  </label>
+                </div>
+              </div>
+              <div class="mb-1 col-md-9">
+                <label for="enterchip" class="form-label text-dablue mt-3"
+                  >Chip de identificación (Si aplica)</label
+                >
+                <input type="Name" class="form-control" />
+              </div>
+              <div class="mb-1 col-md-9">
+                <label for="entercomida" class="form-label text-dablue mt-3"
+                  >Marca de comida favorita</label
+                >
+                <input type="Name" class="form-control" />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="exampleFormControlTextarea1"
+                  class="form-label text-dablue mt-3"
+                  >Tengo estas características:</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  placeholder="Ej. Juguetona, nerviosa..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="content-right">
+              <div class="mb-1">
+                <label for="entername" class="form-label text-dablue mt-3"
+                  >Identifica a tu humano</label
+                >
+                <input type="Name" class="form-control" />
+              </div>
+              <div class="mb-1 col-md-6">
+                <label for="entercel" class="form-label text-dablue mt-3"
+                  >Teléfono de contacto</label
+                >
+                <input type="tel" class="form-control" />
+              </div>
+              <div class="mb-1 col-md-8">
+                <label for="enterdirec" class="form-label text-dablue mt-3"
+                  >Dirección domicilio</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="mb-1">
+                <label for="entername" class="form-label text-dablue mt-3"
+                  >Acudiente autorizado</label
+                >
+                <input type="Name" class="form-control" />
+              </div>
+              <div class="mb-1 col-md-6">
+                <label for="entercel" class="form-label text-dablue mt-3"
+                  >Teléfono acudiente</label
+                >
+                <input type="tel" class="form-control" />
+              </div>
+              <label for="entername" class="form-label text-dablue mt-3"
+                >Añade a otro acudiente</label
+              >
+            <div class="d-flex">
+              <input type="Name" class="form-control"/>
+              <a
+                class="btn btn-secondary text-white rounded-circle mx-3 bg-pink border-pink"
+              >
+                +
+              </a>
+            </div>
+            <label for="entername" class="form-label text-dablue mt-4"
+                ><u><em>Agrega otro PETbeneficiario</em></u></label
+              >
+            <a
+                href="indexformulario.html" class="btn btn-secondary text-white rounded-circle mx-3 bg-pink border-pink"
+              >
+                +
+              </a>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <form id="formulario">
+    <div class="container">
+      <div class="container">
+        <h4 class="text-pink text-left mt-3">Información Médica</h4>
+        <hr />
+      </div>
+
+      <div class="container justify-content-center row m-0">
+        <div class="col-md-4">
+          <strong
+            ><label class="mt-3 text-dablue" for="checkbox"
+              >Esterilizado</label
+            ></strong
+          >
+          <div class="form-check mt-2">
+            <input
+            type="text"
+            class="form-control"
+            id="exampleInputSterilized1"
+            aria-describedby="nameHelp"
+  
+            name="sterilized"
+            #sterilized="ngModel"
+            [(ngModel)]="userService.currentUser.sterilized"
+            />
+            <label
+              class="form-check-label text-dablue"
+              for="flexRadioDefault1 exampleInputSterilized1"
+              >Si
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+            type="text"
+            class="form-control"
+            id="exampleInputSterilized2"
+            aria-describedby="nameHelp"
+  
+            name="sterilized"
+            #sterilized="ngModel"
+            [(ngModel)]="userService.currentUser.sterilized"
+            />
+            <label
+              class="form-check-label text-dablue"
+              for="flexRadioDefault2 exampleInputSterilized2"
+              >No
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label
+              class="form-check-label text-dablue"
+              for="flexRadioDefault2"
+              >N/A
+            </label>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div>
+            <strong
+              ><label class="mt-3 text-dablue" for="checkbox"
+                >Tengo condición médica especial</label
+              ></strong
+            >
+            <div class="form-check mt-2">
+              <input
+              type="text"
+              class="form-control"
+              id="exampleInputSpecialCondition1"
+              aria-describedby="nameHelp"
+    
+              name="specialCondition"
+              #specialCondition="ngModel"
+              [(ngModel)]="userService.currentUser.specialCondition"
+              />
+              <label
+                class="form-check-label text-dablue"
+                for="flexRadioDefault1 exampleInputSpecialCondition1"
+                >Si
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+              type="text"
+              class="form-control"
+              id="exampleInputSpecialCondition2"
+              aria-describedby="nameHelp"
+    
+              name="specialCondition"
+              #specialCondition="ngModel"
+              [(ngModel)]="userService.currentUser.specialCondition"
+              />
+              <label
+                class="form-check-label text-dablue"
+                for="flexRadioDefault2 exampleInputSpecialCondition2"
+                >No
+              </label>
+            </div>
+            <label class="text-dablue" for="Name">¿Cuál?</label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div>
+            <strong
+              ><label class="mt-3 text-dablue" for="checkbox"
+                >Tomo medicamentos</label
+              ></strong
+            >
+            <div class="form-check mt-2">
+              <input
+              type="text"
+              class="form-control"
+              id="exampleInputMedicines1"
+              aria-describedby="nameHelp"
+    
+              name="medicines"
+              #medicines="ngModel"
+              [(ngModel)]="userService.currentUser.medicines"
+              />
+              <label
+                class="form-check-label text-dablue"
+                for="flexRadioDefault1 exampleInputMedicines1"
+                >Si
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+              type="text"
+              class="form-control"
+              id="exampleInputMedicines2"
+              aria-describedby="nameHelp"
+    
+              name="medicines"
+              #medicines="ngModel"
+              [(ngModel)]="userService.currentUser.medicines"
+              />
+              <label
+                class="form-check-label text-dablue"
+                for="flexRadioDefault2 exampleInputMedicines2"
+                >No
+              </label>
+            </div>
+            <label class="text-dablue" for="Name">¿Cuál?</label>
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+
+        
+      
+
+     
+
+      
+    </div>
+  </form>
+  <div class="container d-flex justify-content-center">
+    <form id="formulario">
+      <div class="col-md-12">
+        <div class="mb-1 mt-4">
+          <strong
+            ><label for="exampleInputVaccines1" class="form-label text-dablue mt-3"
+              >Vacunas</label
+            ></strong
+          >
+          <div class="d-flex">
+            <input type="text"
+            class="form-control"
+            id="exampleInputVaccines1"
+            aria-describedby="nameHelp"
+  
+            name="vaccines"
+            #vaccines="ngModel"
+            [(ngModel)]="userService.currentUser.vaccines"/>
+            <a
+              class="btn btn-secondary text-white rounded-circle mx-3 bg-pink border-pink"
+            >
+              +
+            </a>
+          </div>
+        </div>
+      </div>
+      <strong
+        ><label for="entername" class="form-label text-dablue mt-3"
+          >Agrega aqui tu historia clínica</label
+        ></strong
+      >
+      <div class="historia-img mt-4 d-flex">
+        <a href="..." alt="pic"
+          ><img src="assets/img/historia-del-hospital.png" />
+          <input type="file" name="file"
+        /></a>
+      </div>
+      <div class="col-md-12">
+        <div class="mb-3">
+          <strong
+            ><label
+              for="exampleInputComments1"
+              class="form-label text-dablue mt-4"
+              >Comentarios</label
+            ></strong
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="6"
+          ></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+  <form id="formulario">
+    <div class="col-12">
+      <div class="container">
+        <h4 class="text-pink text-left mt-5">Datos para crear tu cuenta</h4>
+        <hr />
+      </div>
+      <div class="container mt-4">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-5">
+            <div class="mb-1">
+              <label for="exampleInputUserName1" class="form-label text-dablue mt-3"
+                >Nombre de usuario</label
+              >
+              <input type="text"
+              class="form-control"
+              id="exampleInputUserName1"
+              aria-describedby="nameHelp"
+    
+              name="userName"
+              #userName="ngModel"
+              [(ngModel)]="userService.currentUser.userName" />
+            </div>
+            <div class="mb-1">
+              <label for="exampleInputEmail1" class="form-label text-dablue mt-3"
+                >Correo electrónico</label
+              >
+              <input type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+    
+              name="email"
+              #email="ngModel"
+              [(ngModel)]="userService.currentUser.email"/>
+            </div>
+            <div class="mb-1">
+              <label
+                for="exampleInputPassword1"
+                class="form-label text-dablue mt-3"
+                >Contraseña</label
+              >
+              <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+    
+              name="password"
+              #password="ngModel"
+              [(ngModel)]="userService.currentUser.password"
+              />
+            </div>
+            <div class="mb-1">
+              <label
+                for="exampleInputConfirmPassword1"
+                class="form-label text-dablue mt-3"
+                >Confirmar Contraseña</label
+              >
+              <input
+              type="password"
+              class="form-control"
+              id="exampleInputConfirmPassword1"
+              placeholder="Confirma tu contraseña"
+    
+              name="confirmPassword"
+              #confirmPassword="ngModel"
+              [(ngModel)]="userService.currentUser.confirmPassword"
+                
+              />
+              <div class="btn2">
+                <button
+                  type="submit"
+                  class="btn btn-secondary bg-blue text-white mt-4"
+                >
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
