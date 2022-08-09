@@ -18,10 +18,10 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   signup(form: NgForm) {
-    let { username, email, password, confirmPassword } = form.value;
+    let { userName, email, password, confirmPassword } = form.value;
 
     //vericamos si los campos estan vacios
-    if (!username || !email || !password || !confirmPassword ) {
+    if (!userName || !email || !password || !confirmPassword ) {
       alert('Diligencie todos los campos');
       return;
     }
@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    this.userService.signUp({ username, email, password, confirmPassword }).subscribe(
+    this.userService.signUp({ userName, email, password, confirmPassword }).subscribe(
       (data: any) => {
         alert(data.status);
         form.reset();

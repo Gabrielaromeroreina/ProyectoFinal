@@ -22,6 +22,10 @@ export class UserService {
     return this.http.post(`${this.URI_USERS_BACKEND}/login`, credentials)
    }
 
+   signUp(formUser: any){
+    return this.http.post(`${this.URI_USERS_BACKEND}/signup`, formUser)
+  }
+
    loggedIn(){
     return localStorage.getItem('token') ? true:false
   }
@@ -31,7 +35,4 @@ export class UserService {
    this.router.navigate(['/login'])
    return
   }
-
-  
-
 }

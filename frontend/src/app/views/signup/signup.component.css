@@ -1,0 +1,29 @@
+/* Estilo formulario*/
+
+.bg-liblue {
+    background-color: #d7f7f5; 
+}
+
+.bg-blue {
+    background-color: #01504A !important;
+}
+.bg-pink {
+    background-color: #f34573 !important;
+}
+.text-dablue {
+    color: #01504A;
+}
+.text-pink {
+    color: #f34573;
+}
+.border-pink {
+    color: #f34573 !important;
+}
+
+.text-title1 {
+    margin-top: 6rem;
+}
+
+.mt-8 {
+    margin-top: 10rem;
+}
