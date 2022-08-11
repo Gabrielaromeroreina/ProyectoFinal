@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-
 //modulo de captura de formularios en angular 
 import { FormsModule} from '@angular/forms';
 //modulo de peticiones http para cliente de http de angular 
