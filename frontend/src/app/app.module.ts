@@ -17,6 +17,9 @@ import { CalendarComponent } from './views/calendar/calendar.component';
 
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +34,8 @@ import { CalendarComponent } from './views/calendar/calendar.component';
     AdminComponent,
     ProductsComponent,
     CalendarComponent,
+ 
+
   ],
   imports: [
     BrowserModule,

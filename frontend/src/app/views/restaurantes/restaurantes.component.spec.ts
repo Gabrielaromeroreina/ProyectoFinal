@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 import { RestaurantesComponent } from './restaurantes.component';
 
 describe('RestaurantesComponent', () => {
