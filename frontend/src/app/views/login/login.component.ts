@@ -23,6 +23,16 @@ export class LoginComponent implements OnInit {
       alert("Debe diligenciar todos los campos")
       return
     }
+    this.userService.login({email, password}).subscribe(
+      (data :any)=> {
+        localStorage.setItem('token', data.token)
+        console.log(this.userService.decodeToken())
+        this.router.navigate(['/home'])
+      },
+      (error)=>{
+        alert(error.error.status)
+      }
+      )
    }
 
 }
