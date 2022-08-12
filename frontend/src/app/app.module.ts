@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+//modulo de captura de formularios en angular 
+import { FormsModule} from '@angular/forms';
+//modulo de peticiones http para cliente de http de angular 
+import { HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +18,6 @@ import { FamilyComponent } from './views/family/family.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { ProductsComponent } from './views/products/products.component';
 import { CalendarComponent } from './views/calendar/calendar.component';
-
 
 
 @NgModule({

@@ -18,6 +18,10 @@ app.use(cors ())
 require('./database.js')
 
 //rutas 
+
+/* app.use('/api/products', require('./routes/product'))*/
+app.use('/api/users', require('./routes/user'))
+
 app.use('/api/products', require('./routes/product'))
 /* app.use('/api/users', require('./routes/user')) */
 
