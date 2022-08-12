@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 //cliente http de angular para hacer perticiones de htpp
 import { HttpClient, HttpHandler } from '@angular/common/http';
 
-
+import jwtDecode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,10 @@ export class UserService {
     return this.http.post(`${this.URI_USERS_BACKEND}/login`, credentials)
    }
 
+   signUp(formUser: any){
+    return this.http.post(`${this.URI_USERS_BACKEND}/signup`, formUser)
+  }
+
    loggedIn(){
     return localStorage.getItem('token') ? true:false
   }
@@ -32,6 +36,19 @@ export class UserService {
    return
   }
 
-  
+  isAdmin(){
+    const data = this.decodeToken()
+    const isAdmin = data.role
 
+    if(isAdmin === "admin"){
+      return true
+    }
+    return false
+  }
+
+  decodeToken(): any{
+    const token = localStorage.getItem('token')
+    const decoded = jwtDecode(token ? token : "Error en token")
+    return decoded
+  }
 }

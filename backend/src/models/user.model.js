@@ -1,22 +1,4 @@
 const mongoose = require('mongoose')
-<<<<<<< HEAD
-const {Schema} = mongoose
-
-const userSchema = new Schema({
-    firstName: {type: String, required: true},
-    lastName:{type: String, required: true},
-    email: {type: String, required: true},
-    password:{type: String, required: true},
-    isActive:{type: Boolean, default: true},
-   
-},
-{
-    timestamps: true,
-    versionKey: false
-})
-
-module.exports= mongoose.model ('User', userSchema)
-=======
 const { Schema } = mongoose
 
 const userSchema = new Schema(
@@ -27,22 +9,27 @@ const userSchema = new Schema(
         age: {type: Number, required: true},
         weight: {type: Number, required: true},
         gender: {type: String, required: true},
-        chip: {type: String, required: false},
-        foodbrand: {type: String, required: false},
-        characteristic: {type: String, required: false},
-    },
-    {
-        sterilized: {type: Boolean, required: true},
-        specialCondition: {type: Boolean, required: true},
-        medicines: {type: Boolean, required: true},
+        chip: {type: String, required: true},
+        foodbrand: {type: String, required: true},
+        characteristic: {type: String, required: true},
+        sterilized: {type: String, required: true},
+        specialCondition: {type: String, required: true},
+        whichSpecialCondition: {type: String, required: true},
+        medicines: {type: String, required: true},
+        whichMedicines:{type: String, required: true},
         vaccines: {type: String, required: true},
-    },
-    {
+        whichVaccines: {type: String, required: true},
         userName: {type: String, required: true},
         email: {type: String, required: true},
         password: {type: String, required: true},
         confirmPassword: {type: String, required: true},
-        isActive: {type: Boolean, default: true},
+        human: {type: String, required: true},
+        cellphone: {type: String, required: true},
+        address: {type: String, required: true},
+        humanAut: {type: String, required: true},
+        cellphoneAut: {type: String, required: true},
+        role: {type: String, default: "client"}  
+        
     },
     {
         timestamps: true,
@@ -51,4 +38,3 @@ const userSchema = new Schema(
 )
 
 module.exports = mongoose.model('User', userSchema)
->>>>>>> signup

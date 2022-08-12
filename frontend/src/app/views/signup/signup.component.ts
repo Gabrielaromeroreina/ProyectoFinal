@@ -18,11 +18,12 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   signup(form: NgForm) {
-    let { username, email, password, confirmPassword } = form.value;
+    let { name, species, breed, age, weight, gender, chip, foodbrand, characteristic, sterilized, specialCondition, whichSpecialCondition, medicines, whichMedicines, vaccines, whichVaccines, userName, email, password, confirmPassword, human, cellphone, address, humanAut, cellphoneAut } = form.value;
 
-    //vericamos si los campos estan vacios
-    if (!username || !email || !password || !confirmPassword ) {
+ //vericamos si los campos estan vacios
+    if (!name || !species || !breed || !age || !weight || !gender || !chip || !foodbrand || !characteristic || !sterilized || !specialCondition || !whichSpecialCondition || !medicines || !whichMedicines || !vaccines || !whichVaccines || !userName || !email || !password || !confirmPassword || !human || !cellphone || !address || !humanAut || !cellphoneAut ) {
       alert('Diligencie todos los campos');
+      console.log(form.value)
       return;
     }
 
@@ -32,7 +33,7 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    this.userService.signUp({ username, email, password, confirmPassword }).subscribe(
+    this.userService.signUp({ name, species, breed, age, weight, gender, chip, foodbrand, characteristic, sterilized, specialCondition, whichSpecialCondition, medicines, whichMedicines, vaccines, whichVaccines, userName, email, password, confirmPassword, human, cellphone, address, humanAut, cellphoneAut }).subscribe(
       (data: any) => {
         alert(data.status);
         form.reset();
