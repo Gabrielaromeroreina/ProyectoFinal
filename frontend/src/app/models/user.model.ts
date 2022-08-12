@@ -1,12 +1,5 @@
 export class User{
     //atributos
-<<<<<<< HEAD
-    _id: string
-    userName: string
-    email: string
-    isActive: boolean
-=======
-
     name: string
     species: string
     breed: string
@@ -25,7 +18,6 @@ export class User{
     whichVaccines: string
     userName: string
     email: string
->>>>>>> laura
     password: string
     confirmPassword: string
     isActive: boolean
@@ -37,11 +29,7 @@ export class User{
     role: string
     
 
-<<<<<<< HEAD
-    constructor(_id ="", email="", userName= "", isActive=true, password="", confirmPassword=""){
-=======
     constructor(name="", species= "", breed="", age=0, weight=0, gender="", chip="", foodbrand="", characteristic="", sterilized="", specialCondition="", whichSpecialCondition="", medicines="", whichMedicines="", vaccines="", whichVaccines="", userName="", email="", isActive=true, password="", confirmPassword="", human="", cellphone="", address="", humanAut="", cellphoneAut="", role=""){
->>>>>>> laura
         //Inicializacion de los atributos cuando tengan un valor 
         this.name= name
         this.species= species
@@ -61,11 +49,6 @@ export class User{
         this.whichVaccines= whichVaccines
         this.userName= userName
         this.email= email
-<<<<<<< HEAD
-        this.userName= userName
-        this.isActive= isActive
-=======
->>>>>>> laura
         this.password= password
         this.confirmPassword= confirmPassword
         this.isActive= isActive

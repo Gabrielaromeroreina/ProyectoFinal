@@ -35,8 +35,6 @@ export class UserService {
    this.router.navigate(['/login'])
    return
   }
-<<<<<<< HEAD
-=======
 
   isAdmin(){
     const data = this.decodeToken()
@@ -53,5 +51,4 @@ export class UserService {
     const decoded = jwtDecode(token ? token : "Error en token")
     return decoded
   }
->>>>>>> laura
 }
