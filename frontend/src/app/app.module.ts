@@ -20,10 +20,6 @@ import { ProductsComponent } from './views/products/products.component';
 import { CalendarComponent } from './views/calendar/calendar.component';
 
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,10 +34,6 @@ import { CalendarComponent } from './views/calendar/calendar.component';
     AdminComponent,
     ProductsComponent,
     CalendarComponent,
-<<<<<<< HEAD
-=======
- 
->>>>>>> emily
 
   ],
   imports: [
