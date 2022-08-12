@@ -18,11 +18,19 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   signup(form: NgForm) {
+<<<<<<< HEAD
     let { userName, email, password, confirmPassword } = form.value;
 
     //vericamos si los campos estan vacios
     if (!userName || !email || !password || !confirmPassword ) {
+=======
+    let { name, species, breed, age, weight, gender, chip, foodbrand, characteristic, sterilized, specialCondition, whichSpecialCondition, medicines, whichMedicines, vaccines, whichVaccines, userName, email, password, confirmPassword, human, cellphone, address, humanAut, cellphoneAut } = form.value;
+
+ //vericamos si los campos estan vacios
+    if (!name || !species || !breed || !age || !weight || !gender || !chip || !foodbrand || !characteristic || !sterilized || !specialCondition || !whichSpecialCondition || !medicines || !whichMedicines || !vaccines || !whichVaccines || !userName || !email || !password || !confirmPassword || !human || !cellphone || !address || !humanAut || !cellphoneAut ) {
+>>>>>>> laura
       alert('Diligencie todos los campos');
+      console.log(form.value)
       return;
     }
 
@@ -32,7 +40,11 @@ export class SignupComponent implements OnInit {
       return;
     }
 
+<<<<<<< HEAD
     this.userService.signUp({ userName, email, password, confirmPassword }).subscribe(
+=======
+    this.userService.signUp({ name, species, breed, age, weight, gender, chip, foodbrand, characteristic, sterilized, specialCondition, whichSpecialCondition, medicines, whichMedicines, vaccines, whichVaccines, userName, email, password, confirmPassword, human, cellphone, address, humanAut, cellphoneAut }).subscribe(
+>>>>>>> laura
       (data: any) => {
         alert(data.status);
         form.reset();

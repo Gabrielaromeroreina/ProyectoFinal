@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 /* Estilo formulario*/
 
+=======
+>>>>>>> laura
 .bg-liblue {
     background-color: #d7f7f5; 
 }
@@ -20,10 +23,35 @@
     color: #f34573 !important;
 }
 
+<<<<<<< HEAD
 .text-title1 {
     margin-top: 6rem;
 }
 
 .mt-8 {
     margin-top: 10rem;
+=======
+.logo {
+    margin: 4px;
+}
+
+.text-title1 {
+    justify-content: center;
+    margin-left: 1130px;
+}
+
+.col-md-5 {
+    margin-left: 50px;
+}
+
+.input-bg {
+    background-color: #f34573;
+}
+
+.border-default {
+  border-color: rgb(224, 236, 236);
+}
+.mt-8 {
+    margin-top: 6rem;
+>>>>>>> laura
 }

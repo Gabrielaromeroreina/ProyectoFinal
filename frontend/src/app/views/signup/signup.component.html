@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <form #userForm="ngForm" id="formulario">
       <div class="container col-md-5">
@@ -71,3 +72,398 @@
 
  
 
+=======
+<div class="d-flex justify-content-center mt-5">
+  <div class="border m-5 p-5 rounded">
+    <form #userForm="ngForm">
+      <div class="mt-4">
+        <h4 class="text-pink text-left mt-6">Crea tu PETcuenta</h4>
+        <hr />
+      </div>
+      <div class="row d-flex justify-content-center mt-3 mb-1">
+        <label for="exampleInputUserName1" class="form-label text-dablue mt-3"
+          >Nombre de usuario</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputUserName1"
+          aria-describedby="nameHelp"
+          name="userName"
+          #userName="ngModel"
+          [(ngModel)]="userService.currentUser.userName"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="exampleInputEmail1" class="form-label text-dablue mt-3"
+          >Correo electrónico</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+          #email="ngModel"
+          [(ngModel)]="userService.currentUser.email"
+        />
+      </div>
+      <div class="mb-1">
+        <label for="exampleInputPassword1" class="form-label text-dablue mt-3"
+          >Contraseña</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          name="password"
+          #password="ngModel"
+          [(ngModel)]="userService.currentUser.password"
+        />
+      </div>
+      <div class="mb-1">
+        <label
+          for="exampleInputConfirmPassword1"
+          class="form-label text-dablue mt-3"
+          >Confirmar Contraseña</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputConfirmPassword1"
+          placeholder="Confirma tu contraseña"
+          name="confirmPassword"
+          #confirmPassword="ngModel"
+          [(ngModel)]="userService.currentUser.confirmPassword"
+        />
+      </div>
+      <div class="container mt-5">
+        <h4 class="text-pink text-left mt-1">Información General</h4>
+        <hr />
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center mb-1">
+        <label for="exampleInputName1" class="form-label text-dablue mt-3"
+          >Nombre</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputName1"
+          aria-describedby="nameHelp"
+          name="name"
+          #name="ngModel"
+          [(ngModel)]="userService.currentUser.name"
+        />
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center mb-1">
+        <label for="flexRadioDefault" class="form-label text-dablue mt-3"
+          >Especie</label
+        >
+        <div class="form-check">
+          <select
+            class="form-control"
+            id="exampleInputSpecies1"
+            name="species"
+            #species="ngModel"
+            [(ngModel)]="userService.currentUser.species"
+          >
+            <option value="Perro/a">Perro/a</option>
+            <option value="Gato/a">Gato/a</option>
+            <option value="Pez">Pez</option>
+            <option value="Ave">Ave</option>
+            <option value="Roedor">Roedor</option>
+          </select>
+        </div>
+      </div>
+      <div class="mt-3">
+        <label for="exampleInputBreed1" class="form-label text-dablue mt-3"
+          >Raza</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputBreed1"
+          aria-describedby="nameHelp"
+          name="breed"
+          #breed="ngModel"
+          [(ngModel)]="userService.currentUser.breed"
+        />
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputAge1" class="form-label text-dablue mt-3"
+          >Edad</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputAge1"
+          aria-describedby="nameHelp"
+          name="age"
+          #age="ngModel"
+          [(ngModel)]="userService.currentUser.age"
+        />
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputWeight1" class="form-label text-dablue mt-3"
+          >Peso</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputWeight1"
+          placeholder="Kg"
+          aria-describedby="nameHelp"
+          name="weight"
+          #weight="ngModel"
+          [(ngModel)]="userService.currentUser.weight"
+        />
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label class="mt-3 text-dablue" for="checkbox">Sexo</label>
+        <div class="form-check">
+          <select
+            class="form-control"
+            id="exampleInputGender1"
+            name="gender"
+            #gender="ngModel"
+            [(ngModel)]="userService.currentUser.gender"
+          >
+            <option value="Macho">Macho</option>
+            <option value="Hembra">Hembra</option>
+          </select>
+        </div>
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputChip1" class="form-label text-dablue mt-3"
+          >Chip de identificación (Si aplica)</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputChip1"
+          aria-describedby="nameHelp"
+          name="chip"
+          #chip="ngModel"
+          [(ngModel)]="userService.currentUser.chip"
+        />
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputFoodbrand1" class="form-label text-dablue mt-3"
+          >Marca de comida favorita</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputFoodbrand1"
+          aria-describedby="nameHelp"
+          name="foodbrand"
+          #foodbrand="ngModel"
+          [(ngModel)]="userService.currentUser.foodbrand"
+        />
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label
+          for="exampleInputCharacteristic1"
+          class="form-label text-dablue mt-3"
+          >Tengo estas características:</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleInputCharacteristic1"
+          rows="3"
+          placeholder="Ej. Juguetona, nerviosa..."
+          name="characteristic"
+          #characteristic="ngModel"
+          [(ngModel)]="userService.currentUser.characteristic"
+        ></textarea>
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputHuman1" class="form-label text-dablue mt-3"
+          >Identifica a tu humano</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputHuman1"
+          aria-describedby="nameHelp"
+          name="human"
+          #human="ngModel"
+          [(ngModel)]="userService.currentUser.human"
+        />
+      </div>
+
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputCellphone1" class="form-label text-dablue mt-3"
+          >Teléfono de contacto</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputCellphone1"
+          aria-describedby="nameHelp"
+          name="cellphone"
+          #cellphone="ngModel"
+          [(ngModel)]="userService.currentUser.cellphone"
+        />
+      </div>
+
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputAddress1" class="form-label text-dablue mt-3"
+          >Dirección de domicilio</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputAddress1"
+          aria-describedby="nameHelp"
+          name="address"
+          #address="ngModel"
+          [(ngModel)]="userService.currentUser.address"
+        />
+      </div>
+
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label for="exampleInputHumanaut1" class="form-label text-dablue mt-3"
+          >Acudiente autorizado</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputHumanaut1"
+          aria-describedby="nameHelp"
+          name="humanAut"
+          #humanAut="ngModel"
+          [(ngModel)]="userService.currentUser.humanAut"
+        />
+      </div>
+
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label
+          for="exampleInputCellphoneAut1"
+          class="form-label text-dablue mt-3"
+          >Teléfono acudiente</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputCellphoneAut1"
+          aria-describedby="nameHelp"
+          name="cellphoneAut"
+          #cellphoneAut="ngModel"
+          [(ngModel)]="userService.currentUser.cellphoneAut"
+        />
+      </div>
+      <div class="container mt-4">
+        <h4 class="text-pink text-left mt-5">Información Médica</h4>
+        <hr />
+      </div>
+
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label class="mt-3 text-dablue" for="checkbox">Esterilizado</label>
+        <div class="form-check">
+          <select
+            class="form-control"
+            id="exampleInputSterilized1"
+            name="sterilized"
+            #sterilized="ngModel"
+            [(ngModel)]="userService.currentUser.sterilized"
+          >
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            <option value="N/A">N/A</option>
+          </select>
+        </div>
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label class="text-dablue mt-3" for="checkbox"
+          >Tengo una condición médica especial</label
+        >
+        <div class="form-check">
+          <select
+            class="form-control"
+            id="exampleInputSpecialCondition1"
+            name="specialCondition"
+            #specialCondition="ngModel"
+            [(ngModel)]="userService.currentUser.specialCondition"
+          >
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+          <label class="text-dablue mt-3" for="exampleInputWhichSpecialCondition1"
+            >¿Cuál?</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputWhichSpecialCondition1"
+            name="whichSpecialCondition"
+            #whichSpecialCondition="ngModel"
+            [(ngModel)]="userService.currentUser.whichSpecialCondition"
+          />
+        </div>
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label class="text-dablue" for="checkbox">Tomo medicamentos</label>
+        <div class="form-check">
+          <select
+            class="form-control"
+            id="exampleInputMedicines1"
+            name="medicines"
+            #medicines="ngModel"
+            [(ngModel)]="userService.currentUser.medicines"
+          >
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+          <label class="text-dablue mt-3" for="exampleInputWhichMedicines1"
+            >¿Cuáles?</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputWhichMedicines1"
+            name="whichMedicines"
+            #whichMedicines="ngModel"
+            [(ngModel)]="userService.currentUser.whichMedicines"
+          />
+        </div>
+      </div>
+      <div class="container mt-3 row d-flex justify-content-center">
+        <label class="mt-3 text-dablue" for="checkbox">Vacunas</label>
+        <div class="form-check">
+          <select
+            class="form-control"
+            id="exampleInputVaccines1"
+            name="vaccines"
+            #vaccines="ngModel"
+            [(ngModel)]="userService.currentUser.vaccines"
+          >
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select>
+          <label class="text-dablue mt-3" for="exampleInputWhichVaccines1"
+            >¿Cuáles?</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputWhichVaccines1"
+            name="whichVaccines"
+            #whichVaccines="ngModel"
+            [(ngModel)]="userService.currentUser.whichVaccines"
+          />
+        </div>
+      </div>
+      <div class="btn2">
+        <button
+          type="submit"
+          class="btn btn-secondary bg-blue text-white mt-4"
+          (click)="signup(userForm)"
+        >
+          Guardar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+>>>>>>> laura
