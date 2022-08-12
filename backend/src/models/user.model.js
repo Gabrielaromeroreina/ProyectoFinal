@@ -3,8 +3,6 @@ const { Schema } = mongoose
 
 const userSchema = new Schema(
     {
-<<<<<<< HEAD
-=======
         name: {type: String, required: true},
         species: {type: String, required: true},
         breed: {type: String, required: true},
@@ -21,7 +19,6 @@ const userSchema = new Schema(
         whichMedicines:{type: String, required: true},
         vaccines: {type: String, required: true},
         whichVaccines: {type: String, required: true},
->>>>>>> laura
         userName: {type: String, required: true},
         email: {type: String, required: true},
         password: {type: String, required: true},
