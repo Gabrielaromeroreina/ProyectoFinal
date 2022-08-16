@@ -22,4 +22,4 @@ require('./database.js')
 app.use('/api/users', require('./routes/user'))
 
 
-app.listen(port, () => console.log('Ejecutando Api en el puerto', port))
+app.listen(port, () => console.log('Ejecutando Api en el puerto', port)) 
