@@ -1,0 +1,61 @@
+h3{
+    color: #2A6171;
+}
+
+#Productos img{
+    width: 100%;
+    height: 80%;
+}
+
+.button-container{
+    display: inline-block;
+    position: relative;
+}
+
+.button-container a{
+    position: absolute;
+    bottom: 6rem;
+    right: 10rem;
+    background-color: #2A6171;
+    border-radius: 10px;
+    color: white;
+    padding: 0.6rem 1.0rem;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    
+}
+#Servicios .col-lg-4{
+    padding: 22px;
+    margin: 0 !important;
+}
+#Servicios img {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    
+}
+#Servicios img:hover{
+    border: 4px solid white;
+}
+
+#Convenios .col-lg-2{
+    padding: 10px;
+    margin: 0 !important;
+    
+}
+#Convenios img{
+    width: 95%;
+    height: 130px;
+    box-shadow: 5px 8px 8px #2A6171;
+   
+    
+    
+}
+.btn{
+    background-color:#2A6171;
+    color: white;
+    font-size: 18px;
+    
+
+}

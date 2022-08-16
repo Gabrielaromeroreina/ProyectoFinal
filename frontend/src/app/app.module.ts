@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//modulo de captura de formularios en angular 
+import { FormsModule} from '@angular/forms';
+//modulo de peticiones http para cliente de http de angular 
+import { HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +20,6 @@ import { ProductsComponent } from './views/products/products.component';
 import { CalendarComponent } from './views/calendar/calendar.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,10 +34,13 @@ import { CalendarComponent } from './views/calendar/calendar.component';
     AdminComponent,
     ProductsComponent,
     CalendarComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

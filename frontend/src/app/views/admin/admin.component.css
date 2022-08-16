@@ -1,0 +1,20 @@
+.bg-color-prod {
+  background-color: #75cac3;
+}
+
+body {
+  background-color: #75cac3;
+}
+
+.bg-color-imput {
+  background-color: #d7f7f5;
+}
+
+.bg-color-button {
+  background-color: #2a6171;
+  color: white;
+}
+
+.color-text {
+  color: #f34573;
+}

@@ -1,1 +1,91 @@
-<p>admin works!</p>
+<body>
+  <div class="d-flex justify-content-center">
+    <div class="w-40 border m-3 p-5 rounded bg-color-prod">
+      <form #productForm="ngForm">
+        <h3 class="my-4 color-text text-center">Crear Producto en la Tienda</h3>
+
+        <hr class="mb-2" />
+        <div class="mb-2">
+          <h6 for="code" class="form-label color-text">Código</h6>
+          <input
+            type="text"
+            class="form-control bg-color-imput"
+            id="code"
+            aria-describedby="codeHelp"
+            name="code"
+            #name="ngModel"
+            [(ngModel)]="productService.currentProduct.code"
+          />
+        </div>
+        <div class="mb-2">
+          <h6 for="name" class="form-label color-text">Nombre del producto</h6>
+          <input
+            type="text"
+            class="form-control bg-color-imput"
+            id="name"
+            aria-describedby="nameHelp"
+            name="name"
+            #name="ngModel"
+            [(ngModel)]="productService.currentProduct.name"
+          />
+        </div>
+
+        <div class="mb-2">
+          <h6 for="price" class="form-label color-text">Precio</h6>
+          <input
+            type="text"
+            class="form-control bg-color-imput"
+            id="price"
+            aria-describedby="priceHelp"
+            name="price"
+            #price="ngModel"
+            [(ngModel)]="productService.currentProduct.price"
+          />
+        </div>
+
+        <div class="mb-2">
+          <h6 for="stock" class="form-label color-text">Stock</h6>
+          <input
+            type="text"
+            class="form-control bg-color-imput"
+            id="stock"
+            aria-describedby="stockHelp"
+            name="stock"
+            #stock="ngModel"
+            [(ngModel)]="productService.currentProduct.stock"
+          />
+        </div>
+
+        <div class="mb-2">
+          <h6 for="image" class="form-label color-text">Imagen</h6>
+          <input
+            type="text"
+            class="form-control bg-color-imput"
+            id="image"
+            aria-describedby="imageHelp"
+            name="image"
+            #image="ngModel"
+            [(ngModel)]="productService.currentProduct.image"
+          />
+        </div>
+
+        <div class="mb-2">
+          <h6 for="description" class="form-label color-text">Descripción</h6>
+          <textarea
+            type="text"
+            class="form-control bg-color-imput"
+            id="description"
+            name="description"
+            #description="ngModel"
+            [(ngModel)]="productService.currentProduct.description"
+          ></textarea>
+        </div>
+        <div class="mt-3 d-flex justify-content-center">
+          <a class="btn bg-color-button" (click)="createproduct(productForm)">
+            Crear Producto
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

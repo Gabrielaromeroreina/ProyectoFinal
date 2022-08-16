@@ -1,0 +1,92 @@
+.bg-liblue {
+    background-color: #d7f7f5; 
+  }
+  
+  .bg-blue {
+    background-color: #2a6171;
+  }
+  .bg-pink {
+    background-color: #f34573;
+  }
+  .text-dablue {
+    color: #01504A;
+  }
+  .text-pink {
+    color: #f34573;
+  }
+  .text-grey {
+    color: #7d9898;
+  }
+  .mt-7 {
+    margin-top: 14rem;
+  }
+  .mt-8 {
+    margin-top: 7rem;
+  }
+  
+  .logo {
+    margin: 4px;
+  }
+  
+  .text-title1 {
+    justify-content: center;
+    margin-left: 1130px;
+  }
+  .profile-img {
+    width: 200px; /* alto y ancho específico para que el círculo sea redondo */
+    height: 200px;
+    border-radius: 50%; 
+    overflow: hidden; /* oculta todo el contenido fuera de la caja */
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  .profile-img img {
+    position:relative;
+    width: 150%; /* Soluciona el problema de ubicación de las imágenes en cajas circulares */
+    left: -25%; /* posiciona al centro del contenedor la imagen */
+    top: -30px;
+  }
+  
+  .profile-img .file {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 12px;
+    background: #c6daedb8;
+    color: rgb(56, 52, 52);
+    text-align: center;
+    padding: 10px 0 25px;
+   
+  }
+  
+  .profile-img .file input {
+    position: absolute;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer; /* manita de selección al hacer hover */
+  }
+  
+  .col-md-5 {
+      margin-left: 50px;
+  }
+  
+  .input-bg {
+      background-color: #f34573;
+  }
+  
+  .border-default {
+    border-color: rgb(224, 236, 236);
+  }
+  
+  .container5 {
+    margin-left: 740px;
+  }
+  .imgpet {
+    width: 100%;
+    height: auto;
+    }
